@@ -5,8 +5,9 @@
     url_enabled: true
     removable: true
     droppable: true
-    persist:true
-    drag_expand:true
+    persist: true
+    drag_expand: true
+    resizable: false
     
   options = $.extend {}, __default_options, options
 
@@ -27,6 +28,7 @@
   __set_option 'url-enabled', 'url_enabled'
   __set_option 'droppable'
   __set_option 'drag_expand'
+  __set_option 'resizable'
 
   ###
      Init Dragging options
