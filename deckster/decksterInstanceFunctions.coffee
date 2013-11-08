@@ -11,7 +11,7 @@
       * data-is-removed: cards that have been removed and don't need to be position/added to __deck
     ###
     if ($card.attr("data-skip-force")=="true" and $card.attr("data-is-removed")!="true") or remainStatic
-      ### 
+      ###
         if loading a saved deck, just set the new position in __deck and run callbacks so cards don't
           get repositioned with _force_card_to_position(..). 
       ###
@@ -165,6 +165,8 @@
           applied_card_ids[id] = true
 
           $card = __cards_by_id[id]
+          __card_data_by_id[id].row = parseInt row
+          __card_data_by_id[id].col = parseInt col
           d = __card_data_by_id[id]
 
           $card.attr 'data-card-id', id
