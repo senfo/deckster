@@ -81,15 +81,15 @@ $(document).ready(function(){
                 type:"GET",
                 success: function(data,status, response){
                   //replace card content
-                  $cardContent = $contentSection.html(data)
+                  $cardContent = $contentSection.html(data);
 
-                  console.log("I've successfully replaced the content")
+                  console.log("I've successfully replaced the content");
                 },
                 error: function(){
-                  console.log("I've failed to repalce the content")
+                  console.log("I've failed to repalce the content");
                 }
               }
-              return ajax_options
+              return ajax_options;
             },
             "#cardId6" : function($card,$contentSection){
               ajax_options ={
@@ -97,15 +97,15 @@ $(document).ready(function(){
                 type:"GET",
                 success: function(data,status, response){
                   //replace card content
-                  $cardContent = $contentSection.html(data)
+                  $cardContent = $contentSection.html(data);
 
-                  console.log("I've successfully replaced the content on card expand")
+                  console.log("I've successfully replaced the content on card expand");
                 },
                 error: function(){
-                  console.log("I've failed to repalce the content")
+                  console.log("I've failed to repalce the content");
                 }
               }
-              return ajax_options
+              return ajax_options;
             },
             "*":function($card,$contentSection){ /* If any card in this deck is expanded call fn */
               console.log("Running because a card in this deck was expanded");
@@ -118,15 +118,15 @@ $(document).ready(function(){
               url:"./sampleSites/site6",
               type:"GET",
               success: function(data,status, response){
-                $cardContent = $contentSection.html(data)
+                $cardContent = $contentSection.html(data);
 
-                console.log("I've successfully replaced the content on card collapse")
+                console.log("I've successfully replaced the content on card collapse");
               },
               error: function(){
-                console.log("I've failed to repalce the content")
+                console.log("I've failed to repalce the content");
               }
             }
-            return ajax_options
+            return ajax_options;
           }
         }
       },
